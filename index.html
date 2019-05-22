@@ -124,7 +124,7 @@ font-color: black;
 .footer {
   background-color:#6CD6B8;
   padding: 10px;
-  text-align:center;
+  text-align:right;
 }
 
 /*logo*/
@@ -161,10 +161,11 @@ button2 {
 	-moz-box-shadow: 9px 7px 3px -4px rgba(24,133,110,0.86);
 	}
 
-button3 {
-	position: absolute;
+button3{
+	font-family: Arial;
+	position: relative;
 	width: 140px;
-	border: 1px solid gray;
+	border: 1px solid silver;
 	border-radius: 40px;
 	background-color:#C2E3D9;
 	padding:10px;
@@ -184,11 +185,18 @@ input {
 
 .flexContainer {
     display: flex;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 }
 
 .inputField {
-    flex: 1;
+    flex: 3;
 }
 
 }
@@ -267,6 +275,10 @@ input {
   from {opacity: .4} 
   to {opacity: 1}
 }
+ .pics{
+            position: relative;
+            padding-left: 10%;
+        }
 
 </style>
 </head>
@@ -290,7 +302,7 @@ input {
                         <b class="logo" href="index.html">
                             <img src="assets/img/volunteering2.png" alt="JSOFT">
                         </b>
-                    <!--== Logo End ==-->
+                   <!--== Logo End ==-->
 					</div>
 <div class="item1">
 					
@@ -314,13 +326,6 @@ input {
   <div class="mySlides fade">
      <img src="assets/img/beach.jpg" style="width:134.5%; height:500px;">
   </div>
-  <!------------Searching part----------->
-	<div class="flexContainer">
-		<input placeholder="where are you from?"> &nbsp&nbsp&nbsp
-		<input placeholder="where are you from?">&nbsp&nbsp&nbsp
-		<input placeholder="where are you from?">&nbsp&nbsp&nbsp
-		<input placeholder="where are you from?">&nbsp&nbsp&nbsp<br>
-</div>
 
   <div class="mySlides fade">
     <img src="assets/img/hands.jpg" style="width:134.5%; height:500px;">
@@ -336,6 +341,25 @@ input {
 <div style="text-align:center">
   <span class="dot" onclick="currentSlide(1)"></span> 
   <span class="dot" onclick="currentSlide(2)"></span> 
+</div>
+		<!------------icon----------->
+		<div class="pics">
+                <div style="padding-left:">
+                    <span><img src="img/calander.png">&nbsp&nbsp&nbsp</span>
+                </div>
+                <div style="padding-left: 38%">
+                    <span> <img src="img/heart.png">&nbsp&nbsp&nbsp</span>
+                </div>
+				<div style="padding-left: 73%">
+					<img src="img/location.png">&nbsp&nbsp&nbsp
+				</div>
+			</div>
+		<!------------Searching part----------->
+		<div class="flexContainer">
+		<input placeholder="When are you free?"> &nbsp&nbsp&nbsp
+		<input placeholder="what do you care about?">&nbsp&nbsp&nbsp
+		<input placeholder="where?">&nbsp&nbsp&nbsp
+		<input type="image" src="img/active-search.png" style="width:13%; height:6%" alt="Submit">
 </div>
 <script>
 var slideIndex = 1;
@@ -381,28 +405,27 @@ function showSlides(n) {
 <!-------------END-------------------->
 <div class= "grid-container3">
 	<div class="a3">
-		<h3>Author</h3>
-		<a>Volunteering nearby is a website created with 
-		cooperation between companies and organization
-		whose aims are to provide easy access to volunteering
-		activities and exposure on volunteerism. This site
-		helps people to access information on volunteering
-		and participate in events organized by some government
-		and non-government organization</a>
+		<h3 style="font-family:Times New Roman; font-size:35px; padding-left:160px;">About</h3>
+		<p>Volunteering nearby is a website created with cooperation</p>
+		<p>between companies and organizationwhose aims are to provide</p>
+		<p>easy access to volunteering activities and exposure on volunteerism. </p>
+		<p>This site helps people to access information on volunteering</p>
+		<p>and participate in events organized by some government and non-government organization</p>
 	</div>
 	<div class="a4">
-	<h3>Author</h3>
+	<h3 style="font-family:Times New Roman; font-size:35px; padding-left:160px;">Newsletter</h3>
 	<p>Get notified for new events!</p>
 	<div class="flexContainer">
     <input placeholder="Enter email address" class="inputField" >
-    <button3 type="submit">SUBSCRIBE</button3>
+    <button3 type="submit" style="width:30%; padding-top:23px;">SUBSCRIBE</button3>
 	</div>
 	</div>
 	
 	</div>
 
-<div class="footer">
-  <p>Footer</p>
+
+	<div class="footer">
+  <p>©VOLUNTEERINGNEARBY2019</p>
 </div>
 </div>
 

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Blog</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--=== FontAwesome CSS ===-->
+<link href="assets/css/font-awesome.css" rel="stylesheet">
+<style>
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  height: 100%;
+  margin:0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the topnav links */
+
+.topnav {
+background-color:white;
+}
+.topnav a {
+  float: right;
+  display:block;
+  background-color: white;
+  text-align: right;
+  text-float: right;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.topnav2 {
+background-color: #6CD6B8;
+font-color: black;
+}
+
+.grid-container {
+  display: grid;
+  overflow:hidden;
+  grid-template-columns: 10% 45% auto;
+  grid-gap: 4px;
+  background-color: #6CD6B8;
+}
+
+  
+.grid-container > div {
+  font-size: 20px;
+  word-spacing:2.5em;
+  
+}
+
+.item1 {
+
+float: left;
+line-height: 60px;
+}
+
+.item3 {
+float: right;
+text-align:right;
+line-height: 60px;
+padding-right:30px;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+
+/* Style the content */
+.content {
+  background-color: #ddd;
+  padding: 10px;
+  width:100%;;
+  height: 500px;
+}
+
+/* Style the footer */
+.footer {
+  background-color: #f1f1f1;
+  padding: 10px;
+}
+.logo {
+	display:inline-block;
+	padding-top:5px;
+	padding-left:30px;
+	}
+	
+img {
+	width: 55px;
+	height: 45px;
+	}
+button {
+align: right;
+border: 2.5px solid gray;
+background-color: #6CD6B8;
+width: 18%;
+padding:10px;
+}
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: -320px;
+  border-radius: 3px 0 0 3px;
+
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+.bloglist{
+    width:85%;
+    height:95%;
+    text-align: center;
+    position: relative;
+    left:5%;
+    top:5%;
+    border: 1px solid green;
+}
+</style>
+</head>
+
+<body>
+ 
+
+
+<!-----------Top navigator with social media---------------->
+<div class="topnav">
+			  <a href="#"><i class="fa fa-instagram"></i></a>
+			  <a href="#"><i class="fa fa-twitter"></i></a>
+              <a href="#"><i class="fa fa-facebook"></i></a>
+			  <a href="#"><i class="fa fa-pinterest"></i></a>
+			  <a>Follow us</a>
+</div>
+<!--------------End of top nav------------------->
+<div class="grid-container">
+<div class="item2">
+ <!--== Logo Start ==-->
+                        <b class="logo" href="index.html">
+                            <img src="assets/img/volunteering2.png" alt="JSOFT">
+                        </b>
+                    <!--== Logo End ==-->
+					</div>
+<div class="item1">
+					
+					<!-----------menu---------------->
+					<b href="#">HOME</b>
+					<b href="#">EVENTS</b>
+					<b href="#">BLOG</b>
+					<b href="#">CONTACT</b>
+					<!----------end menu------------>
+</div>
+<div class="item3">
+<button href="#" type="button">LOGIN/REG </button>
+</div>
+</div>
+
+<div class = "content">
+    <script defer>
+        let count = 0;
+        var blog=(n,d,vc,cc)=>{
+        
+        a=[[n,"body of blog",d,"blog",vc+" veiws",cc+" comments"]]
+        let f = document.getElementById("bloglist")
+        for(let i=0; i<a.length;i++){
+            var b = document.createElement("div");
+            b.setAttribute("class", "n"+count);
+            b.setAttribute("style","position:relative; width:85%; height:33%; background-color: #ededed; left:10%;")
+            let r = document.createElement("span");
+            r.innerHTML = a[i][0];
+            r.setAttribute("style", "font-weight:bold; font-size:25px;")
+            b.append(r);
+            r = document.createElement("span");
+            r.innerHTML = a[i][1];
+            r.setAttribute("style", "position:relative; left 0px; top:70px;")
+            b.append(r);
+            r = document.createElement("span");
+            r.setAttribute("style","position:relative; top:35px; left:-130px;");
+            let imgN=["calendar.png", "open_book.png","eye.png","comment.png"];
+            for(let j=0;j<imgN.length;j++)
+            r.innerHTML += " <img src='assets/img/services/"+imgN[j]+"' style='width:10px;height:10px;'/>"+a[i][j+2];
+            b.append(r);
+        };
+        f.append(b);
+        count++;
+        };
+    </script>
+  <div class="bloglist" id="bloglist">
+  </div>
+</div>
+
+</div>
+<div class="footer">
+  <p>Footer</p>
+</div>
+
+</body>
+</html>

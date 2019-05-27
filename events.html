@@ -9,13 +9,13 @@
 <style>
 	* {
 		box-sizing: border-box;
-		font-family: Arial, Helvetica, sans-serif;
+		font-family:Times New Roman, serif;
 		}
 
 		body {
 		height: 100%;
 		margin:0px;
-		font-family: Arial, Helvetica, sans-serif;
+		font-family: Time New Roman,serif;
 		}
 
 		/* Style the top navigation bar */
@@ -51,7 +51,16 @@
 		grid-gap: 4px;
 		background-color: #6CD6B8;
 		}
-
+		
+		.grid-container2 {
+		display:  grid;
+	    overflow: hidden;
+		padding-left: 150px;
+		grid-template-columns: 30% 30% 30%;
+		grid-gap: 20px;
+		}
+		
+		
   
 		.grid-container > div {
 		font-size: 20px;
@@ -79,19 +88,28 @@
 		}
 
 
-		/* Style the content */
 		.content {
-		background-color: #ddd;
-		padding: 10px;
+		padding: 30px;
 		width:100%;;
-		height: 500px;
+		height: 700px;
 		}
+		
+		.c1 {
+		padding:100px;
+		padding-right: 30px;
+		}
+		
+		.c2,.c3,.c4,.c5,.c6,.c7 {
+		width: 80%;
+		background-color: silver;
+		height:50px;
+		padding-bottom:150px;}
 
 		/* Style the footer */
 		.footer {
 		background-color:#6CD6B8;
-		padding: 10px;
-		text-align:right;
+		padding: 30px;
+		text-align:center;
 		}
 		.logo {
 		display:inline-block;
@@ -100,8 +118,8 @@
 		}
 	
 		img {
-		width: 55px;
-		height: 45px;
+		width: 45px;
+		height: 30px;
 		}
 		button {
 		align: right;
@@ -173,56 +191,30 @@
 		top: 0;
 		}
 
-		/* The dots/bullets/indicators */
-		.dot {
-		cursor: pointer;
-		height: 15px;
-		width: 15px;
-		margin: 0 2px;
-		background-color: #bbb;
-		border-radius: 50%;
-		display: inline-block;
-		transition: background-color 0.6s ease;
+		
+		/* input */
+		input{
+			width: 30%;
+			padding: 15px;
+			border: 2px solid;
+			border-color:#6CD6B8;
+			background-color:white;
+			
 		}
-
-		.active, .dot:hover {
-		background-color: #717171;
-		}
-
-		/* Fading animation */
-		.fade {
-		-webkit-animation-name: fade;
-		-webkit-animation-duration: 1.5s;
-		animation-name: fade;
-		animation-duration: 1.5s;
-		}
-
-		@-webkit-keyframes fade {
-		from {opacity: .4} 
-		to {opacity: 1}
-		}
-
-		@keyframes fade {
-		from {opacity: .4} 
-		to {opacity: 1}
-		}
-		.bloglist{
-		width:85%;
-		height:95%;
-		text-align: center;
-		position: relative;
-		left:5%;
-		top:5%;
-		border: 1px solid green;
-		border-bottom:none;
+		select {
+			width: 30%;
+			padding: 15px;
+			border: 2px solid;
+			border-color: #6CD6B8;
+			background-color:white;
+			}
+		
 }
 
 </style>
 </head>
 
-<body onload="blog('ORPHANAGES VISIT - BY ADMIN', 'Feb 1, 2019', '1.5k', '131');blog('BEACH CLEANING - BY ADMIN', 'Jan 20, 2019', '4.2k', '200');blog('OLDFOLES VS TEENS - BY ADMIN', 'Dec 19, 2018', '4.9k', '200');">
- 
-
+<body>
 
 <!-----------Top navigator with social media---------------->
 <div class="topnav">
@@ -254,45 +246,42 @@
 <button href="#" type="button">LOGIN/REG </button>
 </div>
 </div>
-
-<div class = "content">
-    <span style="position:absolute;left:100px;top:117px;">HOME > BLOG</span>
-    <script defer>
-        let count = 0;
-        // syntax blog([name],[date],[veiw count],[comment count])
-        var blog=(n,d,vc,cc)=>{
-        
-        a=[n,"READ MORE",d,"blog",vc+" veiws",cc+" comments"]
-        let f = document.getElementById("bloglist")
-            var b = document.createElement("div");
-            b.setAttribute("class", "n"+count);
-            b.setAttribute("style","text-align: left; position:relative; width:85%; height:30%; background-color: #ededed; left:10%; top:"+3*count+"%;")
-            let r = document.createElement("span");
-            r.innerHTML = a[0];
-            r.setAttribute("style", "font-weight:bold; font-size:25px; ")
-            b.append(r);
-            r = document.createElement("span");
-            r.innerHTML = a[1];
-            r.setAttribute("style", "position:absolute; left:0px; top:100px;")
-            b.append(r);
-            r = document.createElement("span");
-            r.setAttribute("style","position:absolute; top:35px; left:0px;");
-            let imgN=["calendar.png", "open_book.png","eye.png","comment.png"];
-            for(let j=0;j<imgN.length;j++)
-            r.innerHTML += " <img src='assets/img/services/"+imgN[j]+"' style='width:10px;height:10px;'/>"+a[j+2];
-            b.append(r);
-        f.append(b);
-        count++;
-        };
-    </script>
-  <div class="bloglist" id="bloglist">
-  </div>
-  <span style="position:absolute; left:1100px; "><b style="font-size: 30px;"><</b><a style="margin-bottom:400px;"> 1 2 3 4 </a><b style="font-size: 30px;">></b></span>
+<span style="position:absolute;left:100px;top:117px;">HOME > EVENTS</span>
+<div class="content">
+	<div class="c1">
+	<input placeholder="Keywords" class="inputField">&nbsp&nbsp&nbsp
+	<select name="category">
+	<option value=""> Category </option>
+	<option value="Beach Cleaning">Beach Cleaning</option>
+	<option value="Orphanage">Orphanage</option>
+	<option value="Homeless">Homeless</option>
+	</select>&nbsp&nbsp&nbsp
+	<select name="location">
+	<option value=""> Location </option>
+	<option value="Kluang">Kluang</option>
+	<option value="Skudai">Skudai</option>
+	<option value="Johor Bahru">Johor Bahru</option>
+	</select>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+	<img src="img/active-search.png">
 </div>
+	<div class="grid-container2">
+	<div class="c2">event1</div>
+	<div class="c3">event2</div>
+	<div class="c4">event3</div>
+	<div class="c5">event4</div>
+	<div class="c6">event5</div>
+	<div class="c7">event6</div>
+	</div><br>
+  <span style="position:absolute; left:1100px; "><b style="font-size: 30px;"><</b><a style="margin-bottom:400px;"> 1 2 3 4 </a><b style="font-size: 30px;">></b></span>
 
 </div>
 <div class="footer">
-  <p>©VOLUNTEERINGNEARBY2019</p>
+  <p>SUPPORTING COMPANIES & ORGANIZATIONS</p>
+  <div class="grid-container2">
+  <div class="d1"> <img src="img/org.png" style="width:60%; height:70%;" > </div>
+    <div class="d1"> <img src="img/org2.png" style="width:40%; height:30%;"> </div>
+	  <div class="d1"> <img src="img/org3.png" style="width:30%; height:60%;"> </div>
+
 </div>
 
 </body>
